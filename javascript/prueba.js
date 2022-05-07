@@ -1,55 +1,61 @@
-let ingresarNumero1 = parseInt(prompt("Bienvenido: ingrese un número"));
-let ingresarNumero2 = parseInt(prompt("ingrese otro número"));
+function solicitarNombre(){
+    let nombreCompleto = prompt("Ingrese su nombre y apellido")
+    alert("El nombre ingresado es " + nombreCompleto)}
+solicitarNombre();
+
+
+let clases = parseInt (prompt("cuantas clases de yoga a la semana deseas tomar (Max 10 por mes)"));
+while(clases){
+switch (clases) {
+
+
+case "1": 
+alert("serían mil quinientos pesos");
+break;
+case "2": 
+alert("serían dos mil ochocientos pesos");
+break;
+case "3": 
+alert("serían tres mil trescientos pesos");
+break;
+case "4": 
+alert(" serían cuatro mil cuatrocientos pesos");
+break;
+case "5":
+alert("serían cinco mil pesos");
+break;
+case "6" : 
+alert("serían cinco mil cuatrocientos pesos");
+break;
+case "7": 
+alert("serían seis mil pesos");
+break;
+case "8": 
+alert("serían seis mil cuatrocientos pesos");
+break;
+case "9": 
+alert("serían siete mil pesos");
+break;
+case "10":  
+alert("serían siete mil cuatrocientos pesos");
+break;
+
+default:
+alert("Si desea más de díez clases por mes averiguar llamando al telefono por otros paquetes")
+break;
+
+
+}
+clases = prompt("ingrese otra cantidad");
+}
+alert("Si desea saber cuanto se ahorra por clases le dejamos una calculadora para saber su ahorro");
+let ingresarNumero1 = parseInt(prompt("Ingrese el valor de la clase individual"));
+let ingresarNumero2 = parseInt(prompt("ingrese la cantidad de veces que desea tomar la clase"));
+let ingresarNumero3 = parseInt(prompt("Restelo por la cantidad"));
+
 
 for (let i = ingresarNumero2; i <= 10; i) {
-    let resultado = ingresarNumero1 * i;
-    alert(ingresarNumero1 +" X "+ i +" = "+ resultado);
+    let resultado = ingresarNumero1 * i - ingresarNumero3;
+    alert("El valor total sin descuento es:" + ingresarNumero1 +" X "+ i + " - " + ingresarNumero3 + " = "+ resultado);
     break;
     }
-
-/**let mes = prompt("Ingresar un mes del año");
-while(mes != "ESC" ){
-switch (mes) {
-
-case "enero": 
-alert("faltan 11 meses para navidad");
-break;
-case "febrero": 
-alert("faltan 10 meses para navidad");
-break;
-case "marzo": 
-alert("faltan 9 meses para navidad");
-break;
-case "abril": 
-alert(" faltan 8 meses para navidad");
-break;
-case "mayo":
-alert("faltan 7 meses para navidad");
-break;
-case "junio" : 
-alert("faltan 6 meses para navidad");
-break;
-case "julio": 
-alert("faltan 5 meses para navidad");
-break;
-case "agosto": 
-alert("faltan 4 meses para navidad");
-break;
-case "septiembre": 
-alert("faltan 3 meses para navidad");
-break;
-case "octubre":  
-alert("faltan 2 meses para navidad");
-break;
-case "noviembre":  
-alert("falta 1 meses para navidad");
-break;
-case "diciembre":  
-alert("Esta en el mes de navidad");
-break;
-default :
-alert("No es un mes")
-break;
-}
-mes = prompt("ingrese otro mes del año");
-}/** */

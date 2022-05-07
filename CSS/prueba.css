@@ -1,0 +1,41 @@
+#tituloContacto {
+    font-family: 'Bebas Neue', cursive;
+    text-align: center; 
+}
+  
+  #fotoFondo {
+    background-image: url(../Foto/casalogo2.png.png);
+    background-position: center; 
+}
+
+    main {
+        background-color: beige; 
+}
+       
+
+
+ h1{
+            padding-top: 11vh;
+            font-size: 90px;
+            font-weight: lighter;
+            text-shadow: 7px 4px 5px black;
+            letter-spacing: 5px;
+            text-decoration-color: grey 5px 4px 5px 4px;
+            font-family: 'Bebas Neue', cursive;
+            text-align: center;
+    }
+    
+
+
+            h2 {
+                text-align: center;
+                font-size: 350%;
+                color: white;
+                background: radial-gradient(circle, rgba(238, 167, 0, 0.98673) 0%, #a6a6a6 20%, #ecc665 47%, #9a9a98 78%, #eec026 100%);
+                padding-top: 40px;
+                padding-bottom: 40px;
+                font-family: 'Bebas Neue', cursive;
+                letter-spacing: 15px;
+                border: 15px solid white;
+                text-shadow: 7px 4px 5px black; 
+                   }
