@@ -3,7 +3,7 @@ function solicitarNombre(){
     alert("El nombre ingresado es " + nombreCompleto)}
 solicitarNombre();
 
-
+//cuantas clases quiero (surge el cartel default como 1era pantalla)
 let clases = parseInt (prompt("cuantas clases de yoga a la semana deseas tomar (Max 10 por mes)"));
 while(clases){
 switch (clases) {
@@ -59,3 +59,30 @@ for (let i = ingresarNumero2; i <= 10; i) {
     alert("El valor total sin descuento es:" + ingresarNumero1 +" X "+ i + " - " + ingresarNumero3 + " = "+ resultado);
     break;
     }
+
+
+    
+    let trabajo = ["clases por Zoom", "clases instituto 1", "Clases instituto 2"]
+    let nuevaModalidad = ['clases mixtas'];
+    let nuevaModalidad2 = [];
+    
+    // ordena alfabeticamente
+    trabajo.sort();
+    console.log(trabajo); // ['exercise', 'sleep', 'work']
+    
+    // busca posición 
+    const ubicacion = trabajo.indexOf("clases por Zoom");
+    console.log(ubicacion); // 2
+    
+    // Quita un elemento
+    const selector = trabajo.slice(1);
+    console.log(selector);
+    
+    // concatenar otro tipo
+    const trabajo2 = trabajo.concat(nuevaModalidad);
+    console.log(trabajo2); 
+
+    // agrego un tipo de clase
+    
+    nuevaModalidad2.push("clases presenciales");
+    console.log(nuevaModalidad2, trabajo); 
