@@ -1,88 +1,47 @@
-function solicitarNombre(){
-    let nombreCompleto = prompt("Ingrese su nombre y apellido")
-    alert("El nombre ingresado es " + nombreCompleto)}
-solicitarNombre();
+let parrafo = document.getElementById("parrafo1")
+parrafo.innerHTML = "<h2>¡BIENVENIDOS YOGUIS!</h2><p>A TUS CLASES PRESENCIALES, PARTICULARES, VIRTUAL O MIXTA</p>"; 
+document.body.append(parrafo);
 
-//cuantas clases quiero (surge el cartel default como 1era pantalla)
-let clases = parseInt (prompt("cuantas clases de yoga a la semana deseas tomar (Max 10 por mes)"));
-while(clases){
-switch (clases) {
+document.getElementById("nombre").value = "";
 
 
-case "1": 
-alert("serían mil quinientos pesos");
-break;
-case "2": 
-alert("serían dos mil ochocientos pesos");
-break;
-case "3": 
-alert("serían tres mil trescientos pesos");
-break;
-case "4": 
-alert(" serían cuatro mil cuatrocientos pesos");
-break;
-case "5":
-alert("serían cinco mil pesos");
-break;
-case "6" : 
-alert("serían cinco mil cuatrocientos pesos");
-break;
-case "7": 
-alert("serían seis mil pesos");
-break;
-case "8": 
-alert("serían seis mil cuatrocientos pesos");
-break;
-case "9": 
-alert("serían siete mil pesos");
-break;
-case "10":  
-alert("serían siete mil cuatrocientos pesos");
-break;
+//no logro poner el titulo por encuma del boton
 
-default:
-alert("Si desea más de díez clases por mes averiguar llamando al telefono por otros paquetes")
-break;
+const boton = document.querySelector("#primerBoton");
+boton.addEventListener("click", function(evento){
+	alert("Se ha enviado la consulta");
+    this.innerText = "enviado";
+});
 
+let instructora1 = document.getElementById("personas");
+//Array con la información a agregar
+
+let profesoras = ["Claudia ", "Gonzalo ", "Nicolas ", "Ana ","Paula "];
+for (const instructora2 of profesoras) {
+    let li = document.createElement("span");
+    li.innerHTML = instructora2
+    instructora1.appendChild(li);}
+
+
+
+
+
+const clases = [{ id: "Presencial en instituto",  valor: 2200, cantidad: 1 },
+                   {  id: "Virtual",  valor: 1500, cantidad: 1 },
+                   {  id: "Mixto",  valor: 2000  , cantidad: 1},
+                   {  id: "Particular",  valor: 3000 ,cantidad: 1}];
+
+for (const clase of clases) {
+let contenedor = document.createElement("ul"); 
+
+// no logré que cambie el color de todas las ul como así tampoco el background>
+
+contenedor.innerHTML = `<h4> ${clase.id}</h4>
+              <p>  Valor de la clase: $ ${clase.valor}</p>
+              <b> Cantidad ${clase.cantidad}</b> <br>`;
+document.body.appendChild(contenedor);
+document.querySelector("ul").style.color="blue";
+document.querySelector("ul").style.backgroundColor = "red";
 
 }
-clases = prompt("ingrese otra cantidad");
-}
-alert("Si desea saber cuanto se ahorra por clases le dejamos una calculadora para saber su ahorro");
-let ingresarNumero1 = parseInt(prompt("Ingrese el valor de la clase individual"));
-let ingresarNumero2 = parseInt(prompt("ingrese la cantidad de veces que desea tomar la clase"));
-let ingresarNumero3 = parseInt(prompt("Restelo por la cantidad"));
 
-
-for (let i = ingresarNumero2; i <= 10; i) {
-    let resultado = ingresarNumero1 * i - ingresarNumero3;
-    alert("El valor total sin descuento es:" + ingresarNumero1 +" X "+ i + " - " + ingresarNumero3 + " = "+ resultado);
-    break;
-    }
-
-
-    
-    let trabajo = ["clases por Zoom", "clases instituto 1", "Clases instituto 2"]
-    let nuevaModalidad = ['clases mixtas'];
-    let nuevaModalidad2 = [];
-    
-    // ordena alfabeticamente
-    trabajo.sort();
-    console.log(trabajo); // ['exercise', 'sleep', 'work']
-    
-    // busca posición 
-    const ubicacion = trabajo.indexOf("clases por Zoom");
-    console.log(ubicacion); // 2
-    
-    // Quita un elemento
-    const selector = trabajo.slice(1);
-    console.log(selector);
-    
-    // concatenar otro tipo
-    const trabajo2 = trabajo.concat(nuevaModalidad);
-    console.log(trabajo2); 
-
-    // agrego un tipo de clase
-    
-    nuevaModalidad2.push("clases presenciales");
-    console.log(nuevaModalidad2, trabajo); 
